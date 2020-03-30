@@ -21,8 +21,6 @@ body {
     box-shadow: 10px 10px 20px rgba(0,0,0,0.20), 0px 8px 20px rgba(0,0,0,0.20);
 }
 
-
-
 .item {
    display: inline-block;
    vertical-align: top;
@@ -70,12 +68,11 @@ h2 {
     font-weight: 700;
 }
 
-sup {
+sup, span {
     font-size: 0.5em;
 }
 
 span {
-    font-size: 0.5em;
     font-weight: 500;
 }
 
@@ -101,7 +98,5 @@ span {
     p {
         font-size: 0.7em;
     }
-
-    
 }
 
