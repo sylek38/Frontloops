@@ -12,8 +12,12 @@
   <div id="container">
     <div id="card">
       <div class="title">
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
         <h2>Payment Method</h2>
       </div>
+      <div class="options">
       <div class="opt opt1">
         <img class="image image1" src="./img/visa.svg">
         <span>Visa</span>
@@ -30,10 +34,40 @@
         <span>Maestro</span>
         <img class="check" src="./img/check.svg">
       </div>
+      </div>
       <div class="confirm">
         <span>Next step</span> <img class="arrow" src="./img/arrow.svg">
       </div>
     </div>
-  </div>  
+  </div>
+  
+  <script>
+
+    /*NODELISTS*/
+    const options = document.querySelectorAll(".opt");  
+    const checkImage = document.querySelectorAll(".check");
+    
+
+      options.forEach(function (option){ // loop the options node list
+
+      option.addEventListener("click", function (e){ // event listener on each of the options
+        
+        // looping checkImages
+        checkImage.forEach(function (chk){
+
+          // selected checkImage clear
+          chk.classList.remove("active");
+          // selected name clear
+          chk.previousElementSibling.classList.remove("active");
+
+          // selected checkImage appear
+        option.lastElementChild.classList.add("active");
+        // selected span appear
+        option.lastElementChild.previousElementSibling.classList.add("active");
+        })
+      
+    });
+  });
+  </script>
 </body>
 </html>
