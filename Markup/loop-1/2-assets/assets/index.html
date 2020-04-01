@@ -10,16 +10,17 @@
 </head>
 <body>
 
-  <div id = "wrapper">
+  <div id="wrapper">
     
     <header>
 
-      <h2>SimpleWheels</h2>
-      <img src="img/account.svg">
+      <div id="top"><h2>SimpleWheels</h2>
+      <div id="bckImage"><img id="account" src="img/account.svg"></div>
+      </div>
       <p>Thanks for your order #2357654, your package will be on it's way shortly</p>
 
     </header>
-    <div id = "items">
+    <div id="items">
 
       <ul>
         <li>
@@ -32,15 +33,28 @@
         </li>
         <li>
           <span class="name">Total</span>
-          <span class="cost">$359</span>
+          <span class="cost">$356</span>
         </li>
       </ul>
 
     </div>
 
-    <img src="img/bicycle.png">
+    <img id="bicycle" src="img/bicycle.png">
 
   </div>
-  
+  <script>
+    const image = document.querySelector("#bckImage");
+
+    image.addEventListener("mouseover", function (e){
+      image.style.boxShadow = "0 0 0 5px rgba(0,0,0,0.1)";
+      image.style.transition = ".3s";
+      image.style.cursor = "pointer";
+    });
+
+    image.addEventListener("mouseleave", function (e){
+      image.style.boxShadow = "none";
+      image.style.transition = ".3s";
+    });
+  </script>
 </body>
 </html>
